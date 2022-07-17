@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Register Page
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/css/bootstrap-grid.min.css" integrity="sha512-QWjMsIpO5eW4+c4ASTEaZ4+eZNZ4YTtSDiu167Rq1Eqw//WlO+rXo4OvZMpyW/ykbN5LFeXmN6N416OzmWo7fA==", crossorigin="anonymous", referrerpolicy="no-referrer")
+        link(rel="stylesheet", href="../style.css")
+    body
+        .container
+            main
+                h1= title
+                form#formSignup
+                    label(for="name") Full Name
+                    input#name(type="text" name="name" required)
+                    label(for="add") Address
+                    input#add(type="text" name="address" required)
+                    label(for="email") Email
+                    input#email(type="email" name="email" required value=`${email}`)
+                    label(for="phone") Contact Number
+                    div
+                        span#noWrapper
+                            span#hover +977
+                            input#phone(type="number" name="phone" required)
+                    label(for="dob") Date of Birth
+                    input#dob(type="date" name="dob" required)
+                    .btn
+                        button(type="submit") Submit
+    script(src="/registerScript.js")
